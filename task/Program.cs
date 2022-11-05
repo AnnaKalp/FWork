@@ -13,7 +13,6 @@ string[] GetString()
 {
     Console.WriteLine("Введите символы через запятую, затем нажмите Enter: ");
     return Console.ReadLine()!.Split(",");
-
 }
 
 int GetLength(string[] arr, int n)
