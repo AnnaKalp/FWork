@@ -8,6 +8,7 @@
  исключительно массивами.*/
 
 Console.Clear();
+int n = 3;
 string[] GetString()
 {
     Console.WriteLine("Введите символы через запятую, затем нажмите Enter: ");
@@ -26,14 +27,14 @@ int GetLength(string[] arr, int n)
     return len;
 }
 
-string[] FindString(string[] inputMassiv, int n)
+string[] FindString(string[] inputArray, int n)
 {
-    string[] result = new string[GetLength(inputMassiv, n)];
-    for (int i = 0, j = 0; i < inputMassiv.Length; i++)
+    string[] result = new string[GetLength(inputArray, n)];
+    for (int i = 0, j = 0; i < inputArray.Length; i++)
     {
-        if (inputMassiv[i].Length <= n)
+        if (inputArray[i].Length <= n)
         {
-            result[j] = inputMassiv[i];
+            result[j] = inputArray[i];
             j++;
         }
     }
@@ -41,6 +42,6 @@ string[] FindString(string[] inputMassiv, int n)
 }
 
 string[] input = GetString();
-string[] output = FindString(input, 3);
+string[] output = FindString(input, n);
 
 Console.WriteLine($"[{String.Join(", ", input)}] -> [{String.Join(", ", output)}]");
